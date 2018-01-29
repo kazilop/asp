@@ -15,5 +15,10 @@ namespace webstore.Controllers
             return View();
         }
 
+        //public IActionResult Shop()
+        //{
+            
+        //}
+
     }
 }

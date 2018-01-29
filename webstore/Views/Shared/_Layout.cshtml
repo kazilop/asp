@@ -27,9 +27,28 @@
 
 <body>
   
-    @(await Html.PartialAsync("_Header"))
+@(await Html.PartialAsync("_Header"))
+    
+    @RenderSection("Above",false)
+    
+<section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                   @(await  Html.PartialAsync("_LeftSideBar"))
+                </div>
 
-    @RenderBody()
+                <div class="col-sm-9 padding-right">
+                    
+                    @RenderBody()
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     @(await Html.PartialAsync("_Footer"))
 
